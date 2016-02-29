@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="populair_movies_tvos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1244" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vyg-Sq-FBX">
+                                <rect key="frame" x="0.0" y="0.0" width="1244" height="700"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h3t-LP-APs">
+                                    <size key="itemSize" width="385" height="585"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="6ym-mq-xrG" customClass="MovieCell" customModule="populair_movies_tvos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="385" height="585"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="385" height="585"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thor_the_dark_world_movie_posters_l" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuP-jW-npO">
+                                                    <rect key="frame" x="35" y="38" width="315" height="467"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="467" id="mpg-TF-SF4"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6Y-Ks-Xob">
+                                                    <rect key="frame" x="35" y="546" width="315" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="TCc-SH-w8z"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="uuP-jW-npO" firstAttribute="leading" secondItem="6ym-mq-xrG" secondAttribute="leadingMargin" constant="27" id="BNO-G0-xfz"/>
+                                            <constraint firstItem="P6Y-Ks-Xob" firstAttribute="top" secondItem="uuP-jW-npO" secondAttribute="bottom" constant="41" id="OP7-Pi-sMy"/>
+                                            <constraint firstItem="uuP-jW-npO" firstAttribute="top" secondItem="6ym-mq-xrG" secondAttribute="topMargin" constant="30" id="ZnN-rB-S4f"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="uuP-jW-npO" secondAttribute="trailing" constant="27" id="nP4-lC-M8l"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="P6Y-Ks-Xob" secondAttribute="trailing" constant="27" id="tPJ-k2-McY"/>
+                                            <constraint firstItem="P6Y-Ks-Xob" firstAttribute="leading" secondItem="6ym-mq-xrG" secondAttribute="leadingMargin" constant="27" id="tc8-zc-fxn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="movieImg" destination="uuP-jW-npO" id="aJU-Bx-pi9"/>
+                                            <outlet property="movieLbl" destination="P6Y-Ks-Xob" id="Fns-kb-gW1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vyg-Sq-FBX" secondAttribute="trailing" constant="-20" id="20V-hB-f8Y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vyg-Sq-FBX" secondAttribute="bottom" id="DVb-6e-4JR"/>
+                            <constraint firstItem="vyg-Sq-FBX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="h0j-v2-hlP"/>
+                            <constraint firstItem="vyg-Sq-FBX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="l4O-DD-CAV"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1244" height="700"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vyg-Sq-FBX" id="W8B-zi-ZLz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="580"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="thor_the_dark_world_movie_posters_l" width="960" height="1422"/>
+    </resources>
+</document>
